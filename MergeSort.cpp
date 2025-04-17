@@ -44,7 +44,7 @@ void MergeSort(int low, int high){
     // step 3
     MergeSort(low, mid);
     MergeSort(mid + 1, high);
-    
+
     // step 4
     int i, j;
     i = low;     // step 4.a
@@ -81,8 +81,14 @@ void MergeSort(int low, int high){
             i++;
             k++;
         }
+        // step 5
+        for (int y = low; y <= high; y++)
+        {
+            B[k] = arr[y];
+        }
+    
+    }
 }
-
 void Output()
 {
     cout << "\nData setelah diurutkan (Merge Sort): ";
