@@ -32,7 +32,13 @@ void input()
         }
     }
 }
-void MergeSort(int low, int high)
+void MergeSort(int low, int high){
+    //step 1
+    if (low >= high)
+    {
+        return; // step 1.a
+    }
+}
 
 void Output()
 {
