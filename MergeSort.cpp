@@ -31,10 +31,15 @@ void MergeSort(int low,int high){
     
 }
 
-void Display(){
-
+void Output(){
+    cout << "\n Data setelah diurutkan (Merge Sort) : ";
+    for( int i = 0; i < n ; i++ ){
+        cout << arr[i] << " ";
+    }
+    cout<<endl;
 }
 
 int main(){
-
+    input();
+    Output();
 }
