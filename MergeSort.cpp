@@ -20,17 +20,16 @@ void input()
         {
             cout << "Inputan Element Maksimal 20";
         }
-
+    }
         cout << "\n=========================";
         cout << "\nInputan Isi Element Array";
         cout << "\n=========================";
 
         for (int i = 0; i < n; i++)
-        {
-            cout << "Array Index Ke-" << i << " : ";
-            cin >> arr[i];
-        }
-    }
+            {
+                cout << "\nArray Index Ke-" << i << " : ";
+                cin >> arr[i];
+            }
 }
 void MergeSort(int low, int high){
     //step 1
@@ -64,30 +63,29 @@ void MergeSort(int low, int high){
                 B[k] = arr[j];
                 j++;
             }
-            k++; // step4.d.ii
         }
-
+        k++; // step4.d.ii
+    }
         // step 4.e
         while (j <= high)
         {
             B[k] = arr[j];
             j++;
-            k++;
+            k=k+1;
         }
-        // step 4.f
+            // step 4.f
         while (i <= mid)
         {
             B[k] = arr[i];
             i++;
             k++;
         }
+
         // step 5
         for (int y = low; y <= high; y++)
         {
-            B[k] = arr[y];
+            arr[y] = B[y];
         }
-    
-    }
 }
 void Output()
 {
@@ -101,5 +99,7 @@ void Output()
 
 int main()
 {
-
+    input();
+    MergeSort(0,n-1);
+    Output();
 }
